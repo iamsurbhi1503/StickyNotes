@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.left_cont {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, #33ccff 0%, #99ffcc 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: animate;
+    animation-duration: 0.4s;
+}
+
+.inputs textarea {
+    border-radius: 8px;
+    padding: 1rem;
+    resize: none;
+    box-sizing: border-box;
+    /* border: 4px solid #111111; */
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    box-shadow: 4px 4px 10px 0px #803636;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.inputs textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.inputs input {
+    cursor: pointer;
+}
+
+.button {
+    width: 80%;
+    margin-top: 2rem;
+}
+
+.button button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    animation-name: animate;
+    animation-duration: 0.4s;
+    background-image: linear-gradient( to right, #ed6ea0, #ec8c69, #f7186a, #fbb03b );
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.button button:hover {
+    background-color: rgba(159, 175, 159, 0.634);
+}
+
+.right_cont {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background: rgb(216, 229, 241);
+}
+
+.right_cont h1 {
+    padding-top: 20px;
+} 
+
+.right_cont h1::before {
+    content: "\1F4DD"; /* Unicode character for 📝 */
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+
+.right_cont .notes {
+    height: 82%;
+    /* margin-top: 2rem; */
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow: scroll;
+    text-align: center;
+}
+
+.right_cont .notes::-webkit-scrollbar {
+    display: none;
+}
+
+.right_cont .notes .para {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10rem;
+}
+
+.new_divs {
+    width: 14rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.2rem 0.5rem 0.2rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inner_div {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    text-align: left;
+}
+
+.inner_div::-webkit-scrollbar {
+    display: none;
+}
+
+.cross {
+    background-color: transparent;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0.5rem;
+    top: 1%;
+}
+
+
+.reset {
+    width: 100%;
+    display: none;
+}
+
+.reset button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    animation-name: animate;
+    animation-duration: 0.4s;
+    background-image: linear-gradient( to right, #ed6ea0, #ec8c69, #f7186a, #fbb03b );
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.reset button:hover {
+    background-color: rgba(128, 0, 92, 0.634);
+}
+
+.button button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.button button:hover {
+    background-color: rgba(0, 128, 0, 0.634);
+    animation: none; /* Disable pulse animation on hover */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
